@@ -17,7 +17,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-        Fragment fragment= null;
+        Fragment fragment = null;
 
         switch (i) {
             case 0:
@@ -30,7 +30,7 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
                 fragment = new Frag3();
                 break;
             case 3:
-                fragment= new Frag4();
+                fragment = new Frag4();
                 break;
         }
 

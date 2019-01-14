@@ -25,6 +25,7 @@ public class TabLayoutActivity extends AppCompatActivity {
     private ViewPagerAdapter adapter;
 
     private ViewPager container;
+    private TabLayout tabs;
 
 
     @Override
@@ -35,20 +36,17 @@ public class TabLayoutActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-       /* //TODO initializing All Views
-        mViewPager = findViewById(R.id.container);
-        TabLayout tabLayout = findViewById(R.id.tabs);
+
+       //TODO initializing All Views
+        container = findViewById(R.id.container);
+        tabs = findViewById(R.id.tabs);
 
         //TODO FragmentPagerAdapter  that returns a fragment corresponding to one of the sections/tabs/pages.
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        mViewPager.setAdapter(adapter);
+        container.setAdapter(adapter);
 
-        mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
-        tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager));*/
-
-        container = findViewById(R.id.container);
-
-
+        container.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabs));
+        tabs.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(container));
 
     }
 
